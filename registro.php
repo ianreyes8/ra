@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include("conexion.php");
 
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Registrarse'])) {
@@ -16,5 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Registrarse'])) {
     } else {
         echo "Error al registrar: " . mysqli_error($conexion);
     }
+} else {
+    echo "No se recibieron datos POST";
 }
 ?>
