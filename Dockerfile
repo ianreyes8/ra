@@ -1,9 +1,18 @@
-FROM php:8.2-apache
+FROM ubuntu:22.04
 
-RUN a2dismod mpm_event mpm_worker && a2enmod mpm_prefork
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    apache2 \
+    php8.1 \
+    php8.1-mysqli \
+    libapache2-mod-php8.1 \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY . /var/www/html/
 
-RUN docker-php-ext-install mysqli
+RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
