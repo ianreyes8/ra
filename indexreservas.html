@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVA DE EVENTOS</title>
+<link rel="stylesheet" href="style4.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style-loader.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="Sobre" class="flex-column">
+        <div class="booking-form" data-aos="fade-right" data-aos-duration="1000">
+            <div class="info-child">
+                <h5>RESERVA UN<br><p>EVENTO</p></h5>
+            </div>
+        </div>
+<!--<form class="form" action="index4.html" method="post" id="registrationForm">-->
+
+    <!--SE AGREGO LA ACCION PARA LLAMAR EL ARCHIVO REGISTRO.PHP Y GUARDAR DATOS DE LOS USUARIOS A USAR EN EL LOGIN MEDIANTE EL METODO POST-->
+    <form class="form" id="tiporeserva" action="tiporeserva.php" method="POST">                    
+                    <label>
+                        <i class='bx bx-user bx-flip-horizontal' ></i>
+                        <input type="text" name="nombreuser" placeholder="Nombre Completo" required/>
+                    </label>
+                    <label>
+                        <i class='bx bx-phone bx-flip-horizontal' ></i>
+                        <input type="tel" name="telefono" id="tel" pattern="^[0-9]{4}-?[0-9]{4}+$" 
+                        title="Solo se acepta el formato:2222-2222" class="control" placeholder="Numero Telefonico" required/> 
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope bx-flip-horizontal' ></i>
+                        <input type="correo" name="email" id="corre" pattern="^[0-9]{4}-?[0-9]{4}+$" title="NombreCorreo@dominio" class="control" 
+                        placeholder="Correo Electronico" required/>
+                    </label>
+                    <label>
+                        <i class='bx bx-list-ul'></i> Selecciona o ingresa el tipo de evento:
+                        <select name="tipo_evento" id="tipoEvento" onchange="checkOtroOption()" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Reunion Familiar">Reunion Familiar</option>
+                            <option value="Fiesta de XV años">Fiesta de XV años</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </label>
+                    
+                    <div id="otroEventoContainer" style="display: none;">
+                        <label>
+                            <i class='bx bx-pencil'></i> Especifica el tipo de evento:
+                            <input type="text" name="otro_evento" placeholder="Especifica el tipo de evento">
+                        </label>
+                    </div>
+                    <label>
+                        <i class='bx bxs-calendar-event'></i>
+                        <input type="date" name="date" placeholder="Fecha" required>
+                    </label>
+                    <label>
+                        <i class='bx bxs-calendar-event'></i>
+                        <input type="time" name="time" placeholder="Hora" required>
+                    </label>
+                    <button type="submit" onclick="submitReservation()" class="btn" name="tiporeserva" value="tiporeserva">Reservar un Evento</button>
+        <!--CULMINA AGREGACION DE DATOS-->     
+
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+</form>
+    </section>
+<script src="script2.js"></script>
+</body>
+</html>

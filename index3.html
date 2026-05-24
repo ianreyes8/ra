@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN AND REGISTER</title>
+<link rel="stylesheet" href="style3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style-loader.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-child">
+                <h2>Bienvenido a Rincon Azteca</h2>
+                <p>Bienvenido a nuestro pagina web, si ya tienes cuenta por favor inicia sesion con tus datos!</p>
+                <input type="button" value="Iniciar Sesion" id="sing-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div classs="form-information-childs">
+                <h2> Crea una Cuenta</h2><br>
+<!--<form class="form" action="index4.html" method="post" id="registrationForm">-->
+
+    <!--SE AGREGO LA ACCION PARA LLAMAR EL ARCHIVO REGISTRO.PHP Y GUARDAR DATOS DE LOS USUARIOS A USAR EN EL LOGIN MEDIANTE EL METODO POST-->
+                <form class="form" action="registro.php" method="POST">
+                    <label>
+                        <i class='bx bx-user bx-flip-horizontal' ></i>
+                        <input type="text" name="nombreuser" placeholder="Nombre Completo" required/>
+                    </label>
+                    <label>
+                        <i class='bx bx-phone bx-flip-horizontal' ></i>
+                        <input type="tel" name="telefono" id="tel" pattern="^[0-9]{4}-?[0-9]{4}+$" 
+                        title="Solo se acepta el formato:2222-2222" class="control" placeholder="Numero Telefonico" required/> 
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope bx-flip-horizontal' ></i>
+                        <input type="correo" name="email" id="corre" pattern="^[0-9]{4}-?[0-9]{4}+$" title="NombreCorreo@dominio" class="control" 
+                        placeholder="Correo Electronico" required/>
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt bx-flip-horizontal' ></i>
+                        <input type="password" name="pass" id="password" pattern="((?=.*\d)(?=.*[A-Z]).{6,15})" title="Su contraseña debe ser de 6 a 15 
+            caracteres y debe de incluir una letra, mayuscula y una minuscula y un numero" class="control" placeholder="Contraseña" required/>
+                    </label>
+                    <input type="submit" value="Registrarse" name="Registrarse">
+        <!--CULMINA AGREGACION DE DATOS-->     
+
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+</form>
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-child">
+                <h2>Bienvenido a Rincon Azteca</h2>
+                <p>Bienvenido a nuestro pagina web, si aun no tienes cuenta por favor registrate con tus datos!</p>
+                <input type="button" value="Registrarse" id="sing-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div classs="form-information-childs">
+                <h2> Inicio de Sesion</h2><br>
+<!--<form class="form2">-->
+                <form class="form" action="iniciarsesion.php" method="POST">
+                    <label>
+                        <i class='bx bx-envelope bx-flip-horizontal' ></i>
+                        <input type="correo" id="correo" name="username" value="" pattern="^[0-9]{4}-?[0-9]{4}+$" title="NombreCorreo@dominio" class="control" 
+                        placeholder="Correo Electronico" required/>
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt bx-flip-horizontal' ></i>
+                        <input type="password" id="password" name="password" value="" pattern="((?=.*\d)(?=.*[A-Z]).{6,15})" title="Su contraseño debe ser de 6 a15 
+            caracteres y debe de incluir una letra ,ayuscula y una minuscula y un numero" class="control" placeholder="Contraseña" required/>
+                    </label>
+                    <input type="submit" value="Inicia Sesion" name="login_button">
+                </form>
+            </div>
+        </div>
+    </div>
+<!--</form>-->
+<script src="script2.js"></script>
+</body>
+</html>

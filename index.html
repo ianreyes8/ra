@@ -1,0 +1,877 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="LOGOO.ico"/>
+    <title>RINCON AZTECA</title>
+</head>
+<body>
+    <header>
+        <div id="prenav-text">
+            <div class="flex-row">
+                <div class="contact-info">Llamanos al: <span>+503 7507 7621</span> o al email:
+                     <span>rinconazteca0@gmail.com</span>
+                    </div>
+                <div class="openings-times flex-row">
+                    LUN - VIER / 9:00-20:00. SAB - DOM / 10:00-22:00
+                    <ul class="social-links flex-row">
+                        <li><a href="https://www.facebook.com/profile.php?id=61550850162682"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/RinconAzteca23"><i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="https://instagram.com/rincon_.azteca?utm_source=qr&igshid=OGIxMTE0OTdkZA=="><i class="bx bxl-instagram"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+
+
+        <nav id="navbar" class="navbar flex-row">
+
+            <div class="nav-icon menu-btn-wrapper">
+                <i id="menu-btn" class="menu-btn bx bx-menu"></i>
+            </div>
+
+            <div class="logo">
+                <h5>RINCON <span>AZTECA</span></h5>
+            </div>
+
+            <ul id="nav-items" class="nav-items">
+                <li><a href="#Inicio" class="nav-links">INICIO</a></li>
+                <li><a href="#Menu" class="nav-links">MENU</a></li>
+                <li><a href="#Sobre" class="nav-links">RESERVACION</a></li>
+                <li><a href="#Eventos" class="nav-links">EVENTOS</a></li>
+                <li><a href="#Galeria" class="nav-links">GALERIA</a></li>
+                <li><a href="#footer" class="nav-links">CONTACTO</a></li>
+            </ul>
+
+            <ul class="nav-btns">
+                <div class="search-btn-wrapper nav-icon">
+                    <i class="searchbtn bx bx-search-alt-2"></i>
+                    <div id="search-form" class="search-form">
+                        <form id="search-form-inner">
+                            <input type="search" class="search-data" placeholder="Search" required>
+                            <button type="submit" class="bx bx-search-alt-2"></button> 
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-btn-wrapper nav-icon">
+                    <i class="cartbtn bx bx-cart"></i>
+                    <span id="cart-count">0</span>
+                    <div id="cart" class="cart flex-row">
+                        <span>No tienes productos en el carrito</span>
+                    </div>
+                    </div>
+                </div>
+                
+
+                <div class="nav-icon">
+                    <i class="darkbtn bx bx-moon"></i>
+                </div>
+            
+            <!--SE AGREGO TITTLE PARA QUE AL PONER EL CURSOR SOBRE EL ICONO DE LOGUEO APAREZCA EL MENZAJE INICIAR SESION / REGISTRO-->
+            
+                <div class="nav-icon" id="user-icon" title="Iniciar Sesión / Registro">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Inicio">
+        <div class="home-carousel owl-carousel owl-theme">
+            <div class="slide slide1">
+                <div class="content">
+                    <p class="sub-heading">RINCON AZTECA</p>
+                    <h1 class="heading">Mejor Comida Mexicana</h1>
+                    <P class="sub-heading-2">COMIDA</P>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <p class="sub-heading">RINCON AZTECA</p>
+                    <h1 class="heading">Enriqueciendo Paladares desde</h1>
+                    <P class="sub-heading-2">1998</P>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Sobre" class="flex-row">
+        <div class="booking-form" data-aos="fade-right" data-aos-duration="1000">
+            <span>Realiza una</span>
+            <h2>RESERVACION</h2>
+            
+            <!--sE AGREGO LA ACCION PARA LLAMAR EL ARCHIVO RESERVA.PHP Y GUARDAR DATOS DE LA RESERVA MEDIANTE EL METODO POST-->
+            
+            <form id="reservation-form" action="reserva.php" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="text" name="email" placeholder="Correo" required>
+                <input type="tel" name="tel" id="tel" value="" pattern="^[0-9]{4}-?[0-9]{4}+$" 
+                title="Solo se acepta el formato:2222-2222" class="control" placeholder="Telefono" required/> 
+                <input type="date" name="date" placeholder="Fecha" required>
+                <input type="time" name="time" placeholder="Hora" required>
+
+                 <!--SE AGREGO NAME AL BOTON REGISTRO PARA REALIZAR EL ENVIO DE LA INFORMACION DEL FORMULARIO A LA BASE-->
+                 <button type="submit" onclick="submitReservationForm()" class="btn1" name="reserva" value="reserva">Reservar una Mesa</button>
+                </form>
+        </div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Reservación Exitosa</h2>
+                <p>Tu reservación ha sido confirmada. Te esperamos en la fecha y hora seleccionadas.</p>
+            </div>
+        </div>
+        
+
+        <div class="text-wrapper" data-aos="fade-left"data-aos-duration="1000">
+            <h1>APARTADO DE RESERVACIONES</h1>
+            <h3>Reserva ya!</h3>
+            <p>En cada ingrediente y en cada preparación, dejamos un pedacito de nuestro corazón.<br> 
+            ¡Hoy cocinaremos con pasión y sabor para hacer de cada plato una obra de arte que alimente el alma y el cuerpo!</p> <br>
+            <p>Inicia Sesion para Reservar</p>
+            <a href="#" class="btn2" id="login-link">Inicia Sesión</a>
+            <a href="#" class="btn3" id="reservation-event">Reservar Eventos</a>
+</div>
+    </section>
+
+    <section id="quote">
+        <div class="text-wrapper">
+            <h2>100% MEXICO</h2>
+            <h1>Mientras el Picante Viva, Nosotros Seremos Eternos</h1>
+        </div>
+    </section>
+    
+    <section id="Menu" class="menu-section">
+        
+        <div class="section-heading">
+            <h3>Selecciones Especiales</h3>
+            <h1>De Nuestro Menu</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div> 
+            </div>
+        </div>
+
+        <div class="menu-tabs flex-row" data-aos="zoom-in"data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+            <div class="menu-tab-item active" data-target="#Entradas">
+                <i class='bx bxs-dish'></i>
+                <span>Entradas</span>
+            </div>
+            <div class="menu-tab-item" data-target="#Platillos">
+                <i class='bx bxs-bowl-hot bx-flip-horizontal' ></i>
+                <span>Platillos</span>
+            </div>
+            <div class="menu-tab-item" data-target="#Bebidas">
+                <i class='bx bxs-wine bx-flip-horizontal' ></i>
+                <span>Bebidas</span>
+            </div>
+            <div class="menu-tab-item" data-target="#Postres">
+                <i class='bx bxs-cake bx-flip-horizontal' ></i>
+                <span>Postres</span>
+            </div>
+        </div>
+
+<!--Entradas-->
+<div id="carrito">
+        <div id="Entradas" class="menu-tab-content show" data-aos="zoom-in"data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+
+            <div class="menu-item" id="Pan Con Ajo" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada1.jpg" alt="Pan Con Ajo">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Pan Con Ajo</h2>
+                            <div class="line"></div>
+                            <span class="price">$4.90</span>
+                        </div>
+                        <div class="desc">
+                            <p>7 ordenes de Panes Con Ajo con aderezos adicionales</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Pan Con Ajo', 4.90, 'menu/Entrads/entrada1.jpg', '7 ordenes de Panes Con Ajo con aderezos adicionales')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Papas Locas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada2.jpg" alt="Papas Locas">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Papas Locas</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Papas con Carne, queso Cheddar, queso, salsa de tomate, pollo</p>
+              <button class="add-to-cart-button" onclick="addToCart('Papas Locas', 2.50, 'menu/Entrads/entrada2.jpg', 'Papas con Carne, queso Cheddar, queso, salsa de tomate, pollo')">Agregar al carrito</button>           </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Papa con Carne" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada3.jpg" alt="Papa Con Carne">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Papa con Carne</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.00</span>
+                        </div>
+                        <div class="desc">
+                            <p>Papa con Carne molida y queso Cheddar</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Pan Con Carne', 3.00, 'menu/Entrads/entrada3.jpg', 'Papa con Carne molida y queso Cheddar')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Alitas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada4.jpg" alt="Alitas">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Alitas</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Alitas Bufalo, con Adereso ranch, BBQ</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Alitas', 3.25, 'menu/Entrads/entrada4.jpg', 'Alitas Bufalo, con Adereso ranch, BBQ')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Aros de Cebolla" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada5.jpg" alt="Aros de Cebolla">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Aros de Cebolla</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.15</span>
+                        </div>
+                        <div class="desc">
+                            <p>Aros de Cebolla con salsa Bufalo y BBQ</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Aros de Cebolla', 2.15, 'menu/Entrads/entrada5.jpg', 'Aros de Cebolla con salsa Bufalo y BBQ')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Chile con Queso" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Entrads/entrada6.jpg" alt="Chile con Queso">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Chile Con Queso</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.85</span>
+                        </div>
+                        <div class="desc">
+                            <p>Bowl con una crema de chile y queso con trozos de tocino y verduras</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Chile Con Queso', 2.85, 'menu/Entrads/entrada6.jpg', 'Bowl con una crema de chile y queso con trozos de tocino y verduras')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+    <!--Platillos-->
+        <div id="Platillos" class="menu-tab-content">
+
+            <div class="menu-item" id="Burritos" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu1.jpg" alt="Burritos">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Burritos</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Burritos de carne, pollo o mixto</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Burritos', 3.50, 'menu/Platillo/menu1.jpg', 'Papas con Carne, queso Cheddar, queso, salsa de tomate, pollo')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Tacos de Pastor" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu2.jpg" alt="Tacos de Pastor">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Tacos de Pastor</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.75</span>
+                        </div>
+                        <div class="desc">
+                            <p>Tacos de Pastor con salsa roja o verde</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Tacos de Pastor', 2.75, 'menu/Platillo/menu2.jpg', 'Tacos de Pastor con salsa roja o verde')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Sopa de Tortilla" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu3.jpg" alt="Sopa de Tortilla">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Sopa de Tortilla</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Aguacate, quesillo, tortilla frita</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Sopa de Tortilla', 2.25, 'menu/Platillo/menu3.jpg', 'Aguacate, quesillo, tortilla frita')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Flautas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu4.jpg" alt="Flautas">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Flautas</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Flautas de pollo, pastor o chorizo</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Flautas', 1.50, 'menu/Platillo/menu4.jpg', 'Flautas de pollo, pastor o chorizo')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Tortas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu5.jpg" alt="Tortas">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Tortas</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Tortas de pollo, carne o mixtas</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Tortas', 2.50, 'menu/Platillo/menu5.jpg', 'Tortas de pollo, carne o mixtas')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Pozole" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Platillo/menu6.jpg" alt="Pozole">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Pozole</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Sopa a base de maiz, con carne e ingredientes complementarios</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Pozole', 3.25, 'menu/Platillo/menu6.jpg', 'Sopa a base de maiz, con carne e ingredientes complementarios')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+<!--Bebidas-->
+        <div id="Bebidas" class="menu-tab-content">
+
+            <div class="menu-item" id="Horchata" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida1.jpg" alt="Horchata">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Horchata</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.30</span>
+                        </div>
+                        <div class="desc">
+                            <p>Horchata clasica, de mani y coco</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Horchata', 1.30, 'menu/Bebidas/Bebida1.jpg', 'Horchata clasica, de mani y coco')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Cebada" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida2.jpg" alt="Cebada">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Cebada</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Fresco de Cebada</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Cebada', 1.25, 'menu/Bebidas/Bebida2.jpg', 'Fresco de Cebada')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Tamarindo" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida3.jpg" alt="Tamarindo">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Tamarindo</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.00</span>
+                        </div>
+                        <div class="desc">
+                            <p>Fresco de Tamarindo</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Tamarindo', 1.00, 'menu/Bebidas/Bebida3.jpg', 'Fresco de Tamarindo')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Michelada" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida4.jpg" alt="Michelada">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Michelada</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.60</span>
+                        </div>
+                        <div class="desc">
+                            <p>Tajin, Cerveza a eleccion, limon</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Michelada', 2.60, 'menu/Bebidas/Bebida4.jpg', 'Tajin, Cerveza a eleccion, limon')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Gaseosas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida5.jpg" alt="Bebidas Tradicionales">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Gaseosas</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.35</span>
+                        </div>
+                        <div class="desc">
+                            <p>Fresa, Uva, Fanta, Pepsi, Sprite, Coca Cola</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Gaseosas', 1.35, 'menu/Bebidas/Bebida5.jpg', 'Fresa, Uva, Fanta, Pepsi, Sprite, Coca Cola')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Jamaica" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Bebidas/Bebida6.jpg" alt="Jamaica">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Jamaica</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.20</span>
+                        </div>
+                        <div class="desc">
+                            <p>Fresco de Jamaica</p>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Fresco de Jamaica', 1.20, 'menu/Bebidas/Bebida6.jpg', 'Fresco de Jamaica')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!--Postres-->
+        <div id="Postres" class="menu-tab-content">
+
+            <div class="menu-item" id="Cheesecake" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres1.jpg" alt="Cheesecake">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Cheesecake</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Tarta de Queso con Jalea de Fresa</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Cheesecake', 3.25, 'menu/Postre/postres1.jpg', 'Tarta de Queso con Jalea de Fresa')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Brownie" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres2.jpg" alt="Brownie">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Brownie</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Brownie de Chocolate con Helado de vainilla</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Brownie', 2.50, 'menu/Postre/postres2.jpg', 'Brownie de Chocolate con Helado de vainilla')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Flan" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres4.jpg" alt="Flan">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Flan</h2>
+                            <div class="line"></div>
+                            <span class="price">$1.50</span>
+                        </div>
+                        <div class="desc">
+                            <p>Flan de Caramelo</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Flan', 1.50, 'menu/Postre/postres4.jpg', 'Flan de Caramelo')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Helado" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres3.jpg" alt="Helado">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Helado</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <div class="desc">
+                            <p>Bowl de Helado de vainilla, fresa y chocolates con frutas</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Helado', 3.75, 'menu/Postre/postres3.jpg', 'Bowl de Helado de vainilla, fresa y chocolates con frutas')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Pastel Oreo" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres5.jpg" alt="Pastel Oreo">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Pastel Oreo</h2>
+                            <div class="line"></div>
+                            <span class="price">$2.75</span>
+                        </div>
+                        <div class="desc">
+                            <p>Pastel de Helado con Galletas Oreo</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Pastel de Oreo', 2.75, 'menu/Postre/postres5.jpg', 'Pastel de Helado con Galletas Oreo')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="Crepas" onmouseover="highlightItem(this)" onmouseout="unhighlightItem(this)">
+                <div class="menu-item-inner">
+                    <div class="food-img">
+                        <img src="menu/Postre/postres6.jpg" alt="Crepas">
+                    </div>
+                    <div class="text">
+                        <div class="detalles">
+                            <h2>Crepas</h2>
+                            <div class="line"></div>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <div class="desc">
+                            <p>Crepas con Chocolate o Caramelo y frutas</p>
+                        </div>
+                          <button class="add-to-cart-button" onclick="addToCart('Crepas', 3.25, 'menu/Postre/postres6.jpg', 'Crepas con Chocolate o Caramelo y frutas')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+    </div>
+
+    </section>
+
+    <section id="Eventos">
+        <div class="section-heading">
+            <h1>Eventos</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div> 
+            </div>
+        </div>
+
+        <div class="events-carousel owl-carousel owl-theme" data-aos="fade-up"data-aos-duration="1000">
+
+            <a class="event-item">
+
+                <h4 class="event-name">Taco Day</h4>
+
+                <span class="details"><i class="icon bx bx-calendar">2023-03-31 - 2023-10-23</i></span>
+                <span class="details"><i class="icon bx bx-time-five">9:00-20:00</i></span>
+                <span class="details"><i class="icon bx bxs-location-plus">15 avenida, N.O., Quezaltepeque, El Salvador</i></span>
+
+                <p class="desc">"Taco Day" se celebra cada 31 de marzo y 23 de octubre, en la cual se realiza el concurso "LA TAQUEADA" donde los participantes tienen que comer
+                la mayor cantidad de tacos en un tiempo litime.</p>
+
+                <div class="event-mark"></div>
+
+            </a>
+
+            <a class="event-item">
+
+                <h4 class="event-name">Dia de la Independencia</h4>
+                
+                <span class="details"><i class="icon bx bx-calendar">2023-09-16</i></span>
+                <span class="details"><i class="icon bx bx-time-five">9:00-20:00</i></span>
+                <span class="details"><i class="icon bx bxs-location-plus">15 avenida, N.O., Quezaltepeque, El Salvador</i></span>
+
+                <p class="desc"> El De la Independencia se celebran el 16 de Septiembre de cada año en la cual se hacen
+                    descuentos especiales en cada uno de nuestros Platillos.</p>
+
+                <div class="event-mark"></div>
+
+            </a>
+
+            <a class="event-item">
+
+                <h4 class="event-name">Navidad y Año nuevo</h4>
+                
+                <span class="details"><i class="icon bx bx-calendar">2023.12.20-30</i></span>
+                <span class="details"><i class="icon bx bx-time-five">9:00-20:00</i></span>
+                <span class="details"><i class="icon bx bxs-location-plus">15 avenida, N.O., Quezaltepeque, El Salvador</i></span>
+
+                <p class="desc">Visitamos del 20 al 30 de Diciembre y celebra junto a nosotros estas festividades
+                    en la cuak habran actividades donde podras ganar hasta comida gratis.
+                </p>
+
+                <div class="event-mark"></div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="Galeria">
+
+        <div class="section-heading">
+            <h3>GALERIA</h3>
+            <h1>Nuestra Pasion</h1>
+             <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div> 
+            </div>
+        </div>
+
+        <div class="gallery-wrapper flex-row" data-aos="fade-right"data-aos-duration="1000">
+
+            <a class= "gallery-img" href="Galeria/galery.jpg">
+                <img src="Galeria/galery.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+            <a class= "gallery-img" href="Galeria/galery2.jpg">
+                <img src="Galeria/galery2.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+            <a class= "gallery-img" href="Galeria/galery3.jpg">
+                <img src="Galeria/galery3.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+            <a class= "gallery-img" href="Galeria/galery4.jpg">
+                <img src="Galeria/galery4.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+            <a class= "gallery-img" href="Galeria/galery5.jpg">
+                <img src="Galeria/galery5.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+            <a class= "gallery-img" href="Galeria/galery6.jpg">
+                <img src="Galeria/galery6.jpg" alt="#">
+            <div class="overlay">
+                <i class='icon bx bx-zoom-in' ></i>
+            </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="Equipo"></section>
+
+    <section class="footer-quote flex-col">
+        <h1>La Mejor Comida Mexicana, De Nuestro Corazon hacia tu Paladar.</h1>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-top flex-row">
+            
+            <div class="flex-col">
+                <h4 class="logo-name">RINCON AZTECA</h4>
+
+                <p class="desc">Rincon Azteca es un restaurante a la carta, el cual tiene como objetivo
+                    enamorar el paladar de las personas con la mejor comida mexicana del pais</p>
+
+                    <ul class="social-links">
+                        <li><a href="https://instagram.com/rincon_.azteca?utm_source=qr&igshid=OGIxMTE0OTdkZA=="><i class="icon bx bxl-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/RinconAzteca23"><i class="icon bx bxl-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61550850162682"><i class="icon bx bxl-facebook"></i></a></li>
+                    </ul>
+            </div>
+
+            <div class="flex-col">
+                <h4 class="heading">DIRECCION</h4>
+
+                <p class="desc">15 avenida, N.O., Quezaltepeque, El Salvador</p>
+                <p class="desc">NUM:+503 7507 7621<br>CORREO:rinconazteca0@gmail.com</p>
+            </div>
+
+            <div class="flex-col">
+                <h4 class="heading">ABRIMOS</h4>
+                <ul class="timings flex-col">
+                    <li>
+                        <p class="days">LUNES</p>
+                        <div class="time">9:00 - 20:00</div>
+                    </li>
+                    <li>
+                        <p class="days">MARTES</p>
+                        <div class="time">9:00 - 20:00</div>
+                    </li>
+                    <li>
+                        <p class="days">MIERCOLES</p>
+                        <div class="time">9:00 - 20:00</div>
+                    </li>
+                    <li>
+                        <p class="days">JUEVES</p>
+                        <div class="time">9:00 - 20:00</div>
+                    </li>
+                    <li>
+                        <p class="days">VIERNES</p>
+                        <div class="time">9:00 - 20:00</div>
+                    </li>
+                    <li>
+                        <p class="days">SABADO</p>
+                        <div class="time">10:00 - 22:00</div>
+                    </li>
+                    <li>
+                        <p class="days">DOMINGO</p>
+                        <div class="time">10:00 - 18:00</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex-col">
+                <h4 class="heading">MAS INFORMACION</h4>
+                <a href="#Menu">MENU</a>
+                <a href="#Sobre">RESERVACION</a>
+                <a href="#Galeria">GALERIA</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom flex-row">
+            <span>Copyright & copy 2026 All right reserved to Ian Reyes!</span>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        lightGallery(document.querySelector('.gallery-wrapper'));
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

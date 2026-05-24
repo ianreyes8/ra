@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+:root{
+    --bg-color-1: #FFF;
+    --bg-color-2: #f9f6f0;
+    --grey-color: rgba(0, 0, 0, 0.20);
+    --heading-color: #2c2c2c;
+    --text-color: #353535;
+    --primary-color: #ed2433;
+    --font-family-1: 'Roboto', sans-serif;
+    --font-family-2: 'Cookie', sans-serif;
+    --font-family-3: 'Dancing', sans-serif;
+    --font-family-4: 'Young Serif', sans-serif;
+    --font-family-5: 'Libre Baskerville', sans-serif;
+    --nav-items-border-bottom: 1px solid rgba(0,0,0, 0.07);
+    --color-scheme: light;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(img/LLAMa.jpg);
+    background-size: cover;
+}
+
+.container-form{
+    max-width: 900px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+.information{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(5, 3, 3);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-child {
+   margin-top: 20px; 
+   text-align: center; 
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   padding: 20px;
+   width: 80%;
+   border-radius: 10px;
+}
+
+.info-child h5 {
+   font-family: var(--font-family-5);
+   font-size: 2.1rem;
+   color: #ff0000;
+   text-align: center;
+   margin-bottom: 10px; 
+}
+
+.info-child p {
+   font-family: var(--font-family-5);
+   color: rgb(255, 255, 255);
+   display: block;
+   text-align: center; 
+}
+
+.info-child h5,
+.info-child span {
+   height: 100px;
+    margin-left: 55px;
+}
+
+.form{
+   backdrop-filter: blur(8px);
+   border-radius: 20px;
+   width: 80%;
+   margin: 0 auto;
+   padding: 20px;
+   align-items: center;
+}
+
+.form-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: rgb(255, 255, 255)
+}
+
+.form-information-childs{
+    padding: 0 30px;
+}
+
+.form-information-childs h2{
+   color: white;
+}
+.form-information-childs p{
+   color: white;
+}
+ .form{
+    margin: 30px 0 0 0;
+ }
+
+ .form label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+ }
+
+ .form label input{
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+ }
+
+ .form label i{
+    color: #a7a7a7;
+ }
+
+ .form input[type="submit"] {
+    background-color: #ac4747;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+ }
+
+ .form input[type="submit"]:hover{
+    background: #166b03;
+ }
+
+ .hide{
+    position: absolute;
+    transform: translateY(-1000px);
+ }
+
+ #Sobre {
+   padding: 0 4.5rem;
+   border: var(--bg-color-1);
+   border-radius: 20px;
+   position: relative;
+   text-align: center; 
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+ #Sobre.flex-column{
+justify-content: center;
+ }
+
+ .flex-column {
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   justify-content: center; 
+}
+.flex-row {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+ .booking-form{
+   border: 2 px solid red;
+ }
+
+.btn{
+   display: inline-block;
+   background-color: #ac4747;
+   border-radius: 20px;
+   color: white;
+   width: 100%;
+   font-size: 18px;
+   font-weight: 400;
+   padding: 20px 30px;
+   margin-top: 10px;
+   transition: all 0.3s ease-in-out;
+   text-align: center;
+   position: relative;
+   cursor: pointer;
+}
+
+.btn:hover{
+   background-color: rgb(14, 82, 14);
+   color: white;
+}
+
+ /*FORMULARIO RESPONSIVO XD*/
+ @media screen and (max-width:750px) {
+    html {
+        font-size: 12px;
+    }
+ }
+
+ @media screen and (max-width:580px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container-form{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .information{
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .form-information{
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+ }
+
+
+
+ 
+ .form2{
+    margin: 30px 0 0 0;
+ }
+
+ .form2 label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+ }
+
+ .form2 label input{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+ }
+
+ .form2 label i{
+    color: #a7a7a7;
+ }
+
+ .form2 input[type="submit"] {
+    background-color: #ac4747;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+ }
+
+ .form2 input[type="submit"]:hover{
+    background: #036b0c;
+ }
+
+ 
